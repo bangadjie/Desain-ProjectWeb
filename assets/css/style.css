@@ -74,6 +74,15 @@ main section:nth-of-type(2) {
     gap: 1rem;
 }
 
+main section:nth-of-type(2) h2 {
+    /* bagian 1/-1 ini berfungsi untuk tulisan ringkasan,
+    supaya gak ikut jadi satu dengan css yang tabel total buku dkk*/
+    /* mulai dari kolom pertama sampai terakhir, bagian section h2,
+    akan di gabung dan tulisannya jadi di tengah */
+    grid-column: 1 / -1; 
+    text-align: center;
+}
+
 main section:nth-of-type(2) article {
     background-color: #eef4fa;
     border-radius: 8px;
