@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #2d4b12;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -70,7 +70,7 @@ section h2 {
 /* ===== Kartu Statistik (CSS Grid) ===== */
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -90,7 +90,7 @@ main section:nth-of-type(2) article {
     text-align: center;
 }
 
-main section:nth-of-type() article h3 {
+main section:nth-of-type(2) article h3 {
     font-size: 0.95rem;
     color: #55677a;
     margin-bottom: 0.5rem;
@@ -142,8 +142,12 @@ td button:first-of-type {
 }
 
 td button:last-of-type {
-    background-color: #d9534f;
+    background-color: #3c3ce7;
     color: #fff;
+}
+
+button:not(:first-of-type):not(:last-of-type) {
+  background-color: #d9534f;
 }
 
 /* ===== Form ===== */
