@@ -1,195 +1,202 @@
 /* ===== Reset & Base ===== */
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Ukuran elemen termasuk padding & border */
+    margin: 0;              /* Menghilangkan margin/jarak di dalam bawaan */
+    padding: 0;             /* Menghilangkan padding/jarak di luar bawaan */
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #2b2b2b;
-    background-color: #f5f6f8;
-    line-height: 1.5;
+    font-family: "Segoe UI", Arial, sans-serif; /* Jenis font */
+    color: #2b2b2b;                             /* Warna teks */
+    background-color: #f5f6f8;                 /* Warna background */
+    line-height: 1.5;                          /* Jarak antarbaris */
 }
 
 a {
-    color: #1d5b8a;
-    text-decoration: none;
+    color: #1d5b8a;          /* Warna link */
+    text-decoration: none;  /* Menghilangkan garis bawah */
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Garis bawah saat cursor di atas link */
 }
 
+
 /* ===== Header & Navbar (Flexbox) ===== */
+
 header {
-    background-color: #2d4b12;
-    color: #fff;
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background-color: #1d5b8a; /* Warna background header */
+    color: #fff;               /* Warna teks */
+    padding: 1rem 1.5rem;      /* Jarak bagian dalam */
+    
+    display: flex;             /* Menggunakan Flexbox */
+    align-items: center;       /* Posisi item vertikal di tengah */
+    justify-content: space-between; /* Item berjauhan kiri-kanan */
+    flex-wrap: wrap;           /* Item boleh turun ke baris berikutnya */
 }
 
 header h1 {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Ukuran judul */
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.25rem;
+    list-style: none; /* Menghilangkan bullet pada list */
+    display: flex;    /* Menu dibuat berjajar */
+    gap: 1.25rem;     /* Jarak antar menu */
 }
 
 header nav a {
-    color: #fff;
-    font-weight: 500;
+    color: #fff;      /* Warna teks menu */
+    font-weight: 500; /* Ketebalan teks */
 }
+
 
 /* ===== Main Layout ===== */
 main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    max-width: 1000px; /* Lebar maksimal konten */
+    margin: 2rem auto; /* Jarak atas-bawah + posisi tengah */
+    padding: 0 1.5rem; /* Jarak kiri-kanan bagian dalam */
 }
 
 section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: #fff; /* Background putih */
+    border-radius: 8px;     /* Membuat sudut melengkung */
+    padding: 1.5rem;        /* Jarak isi dengan tepi */
+    margin-bottom: 1.5rem;  /* Jarak dengan section berikutnya */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Bayangan */
 }
 
 section h2 {
-    margin-bottom: 1rem;
-    color: #1d5b8a;
+    margin-bottom: 1rem; /* Jarak bawah judul */
+    color: #1d5b8a;      /* Warna judul */
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
 main section:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    display: grid; /* Menggunakan CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom dengan ukuran sama */
+    gap: 1rem; /* Jarak antar kolom/baris */
 }
 
 main section:nth-of-type(2) h2 {
-    /* bagian 1/-1 ini berfungsi untuk tulisan ringkasan,
-    supaya gak ikut jadi satu dengan css yang tabel total buku dkk*/
-    /* mulai dari kolom pertama sampai terakhir, bagian section h2,
-    akan di gabung dan tulisannya jadi di tengah */
-    grid-column: 1 / -1; 
-    text-align: center;
+    grid-column: 1 / -1;    /* h2 memenuhi semua kolom dari awal sampai akhir */
+    text-align: center; /* Tulisan di tengah */
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-align: center;
+    background-color: #eef4fa; /* Background kartu */
+    border-radius: 8px;         /* Sudut kartu melengkung */
+    padding: 1.25rem;           /* Jarak isi dengan tepi */
+    text-align: center;         /* Isi kartu di tengah */
 }
 
 main section:nth-of-type(2) article h3 {
-    font-size: 0.95rem;
-    color: #55677a;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem; /* Ukuran judul kartu */
+    color: #55677a;      /* Warna judul */
+    margin-bottom: 0.5rem; /* Jarak dengan angka */
 }
 
 main section:nth-of-type(2) article p {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1d5b8a;
+    font-size: 1.8rem;  /* Ukuran angka */
+    font-weight: 700;   /* Membuat angka tebal */
+    color: #1d5b8a;     /* Warna angka */
 }
 
+
 /* ===== Tabel ===== */
+
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%;              /* Lebar tabel penuh */
+    border-collapse: collapse; /* Menggabungkan border tabel */
 }
 
 th, td {
-    text-align: left;
-    padding: 0.65rem 0.75rem;
-    border-bottom: 1px solid #e2e6ea;
+    text-align: left; /* Teks rata kiri */
+    padding: 0.65rem 0.75rem; /* Jarak isi cell */
+    border-bottom: 1px solid #e2e6ea; /* Garis bawah */
 }
 
 thead {
-    background-color: #1d5b8a;
-    color: #fff;
+    background-color: #1d5b8a; /* Background kepala tabel */
+    color: #fff;               /* Warna teks */
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f7f9fb;
+    background-color: #f7f9fb; /* Warna untuk baris genap */
 }
 
 tbody tr:hover {
-    background-color: #eef4fa;
+    background-color: #eef4fa; /* Warna saat cursor di atas baris */
 }
 
 td button {
-    padding: 0.35rem 0.7rem;
-    margin-right: 0.35rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem; /* Ukuran bagian dalam tombol */
+    margin-right: 0.35rem;   /* Jarak antar tombol */
+    border: none;            /* Menghilangkan border */
+    border-radius: 4px;      /* Sudut tombol */
+    cursor: pointer;         /* Cursor menjadi tangan */
+    font-size: 0.85rem;      /* Ukuran teks tombol */
 }
 
 td button:first-of-type {
-    background-color: #f0ad4e;
-    color: #fff;
+    background-color: #f0ad4e; /* Warna tombol pertama */
+    color: #fff;               /* Warna teks */
 }
 
 td button:last-of-type {
-    background-color: #3c3ce7;
-    color: #fff;
+    background-color: #3c3ce7; /* Warna tombol terakhir */
+    color: #fff;               /* Warna teks */
 }
 
 button:not(:first-of-type):not(:last-of-type) {
-  background-color: #d9534f;
+    background-color: #d9534f; /* Warna tombol di tengah */
 }
 
+
 /* ===== Form ===== */
+
 form p {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Jarak antar bagian form */
 }
 
 form label {
-    display: block;
-    margin-bottom: 0.35rem;
-    font-weight: 600;
-    color: #444;
+    display: block;       /* Label menjadi satu baris */
+    margin-bottom: 0.35rem; /* Jarak label dengan input */
+    font-weight: 600;     /* Label dibuat tebal */
+    color: #444;          /* Warna label */
 }
 
 form input,
 form select {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.55rem 0.7rem;
-    border: 1px solid #cdd4da;
-    border-radius: 4px;
-    font-size: 1rem;
+    width: 100%;          /* Lebar mengikuti container */
+    max-width: 400px;     /* Lebar maksimal 400px */
+    padding: 0.55rem 0.7rem; /* Jarak isi input */
+    border: 1px solid #cdd4da; /* Border input */
+    border-radius: 4px;   /* Sudut input */
+    font-size: 1rem;      /* Ukuran teks */
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
+    background-color: #1d5b8a; /* Warna tombol */
+    color: #fff;               /* Warna teks */
+    border: none;              /* Menghilangkan border */
+    padding: 0.6rem 1.5rem;   /* Ukuran bagian dalam */
+    border-radius: 4px;       /* Sudut tombol */
+    font-size: 1rem;           /* Ukuran teks */
+    cursor: pointer;           /* Cursor menjadi tangan */
 }
 
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: #164869; /* Warna saat cursor di atas tombol */
 }
 
+
 /* ===== Footer ===== */
+
 footer {
-    text-align: center;
-    padding: 1.25rem;
-    color: #7a8794;
-    font-size: 0.9rem;
+    text-align: center; /* Teks di tengah */
+    padding: 1.25rem;   /* Jarak bagian dalam */
+    color: #7a8794;     /* Warna teks */
+    font-size: 0.9rem;  /* Ukuran teks */
 }
