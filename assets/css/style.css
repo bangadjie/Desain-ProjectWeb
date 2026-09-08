@@ -206,59 +206,59 @@ footer {
     overflow-x: auto;
 }
 
-/* Hamburger menu */
+/* ===== Hamburger Menu (checkbox hack) ===== */
 .nav-toggle {
-  display: none;
-}
-.nav-toggle-label {
-  display: none;
-  font-size: 1.6rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* tablet */
-@media (max-width: 768px) {
-  /* aturan CSS di sini HANYA berlaku
-       kalau lebar layar 768px atau lebih sempit */
-       main section:nth-of-type(2){
-        grid-template-columns: repeat(2, 1fr);
-       }
-}
-
-/* mobile */
-@media (max-width: 480px){
-  header {
-    position: relative;
-  }
-
-  .nav-toggle-label {
-    display: block;
-  }
-
-  header nav {
     display: none;
-    width: 100%;
-    order: 3;
-    margin-top: 1rem;
-  }
+}
 
-  .nav-toggle:checked ~ nav {
-    display: block;
-  }
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
 
-  header nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+/* ===== Responsive Breakpoints ===== */
 
-  main section:nth-of-type(2){
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Tablet ke bawah */
+@media (max-width: 768px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-  form input,
-  form select{
-    max-width: 100%;
-  }
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
 
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
 }
