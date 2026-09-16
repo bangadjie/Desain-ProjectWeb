@@ -1,5 +1,5 @@
 /* ===== Reset & Base ===== */
-/* * {
+* {
   box-sizing: border-box; 
   margin: 0; 
   padding: 0; 
@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 
-/* header {
+header {
   background-color: #1d5b8a; 
   color: #fff; 
   padding: 1rem 1.5rem; 
@@ -47,10 +47,10 @@ header nav ul {
 header nav a {
   color: #fff; 
   font-weight: 500; 
-} */
+}
 
 /* ===== Main Layout ===== */
-/* main {
+main {
   max-width: 1000px; 
   margin: 2rem auto; 
   padding: 0 1.5rem; 
@@ -67,10 +67,10 @@ section {
 section h2 {
   margin-bottom: 1rem; 
   color: #1d5b8a; 
-} */
+}
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
-/* main section:nth-of-type(2) {
+main section:nth-of-type(2) {
   display: grid; 
   grid-template-columns: repeat(
     
@@ -101,11 +101,11 @@ main section:nth-of-type(2) article p {
   font-size: 1.8rem; 
   font-weight: 700; 
   color: #1d5b8a; 
-} */
+}
 
 /* ===== Tabel ===== */
 
-/* table {
+table {
   width: 100%; 
   border-collapse: collapse; 
 }
@@ -151,11 +151,11 @@ td button:last-of-type {
 
 button:not(:first-of-type):not(:last-of-type) {
   background-color: #d9534f; 
-} */
+}
 
 /* ===== Form ===== */
 
-/* form p {
+form p {
   margin-bottom: 1rem; 
 }
 
@@ -188,25 +188,25 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
   background-color: #164869; 
-} */
+}
 
 /* ===== Footer ===== */
 
-/* footer {
+footer {
   text-align: center;
   padding: 1.25rem; 
   color: #7a8794;
   font-size: 0.9rem; 
-} */
+}
 
 
 /* ===== Tabel Responsif ===== */
-/* .table-responsive {
+.table-responsive {
     overflow-x: auto;
-} */
+}
 
 /* ===== Hamburger Menu (checkbox hack) ===== */
-/* .nav-toggle {
+.nav-toggle {
     display: none;
 }
 
@@ -215,19 +215,19 @@ form button[type="submit"]:hover {
     font-size: 1.6rem;
     color: #fff;
     cursor: pointer;
-} */
+}
 
 /* ===== Responsive Breakpoints ===== */
 
 /* Tablet ke bawah */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
     }
-} */
+}
 
 /* Mobile */
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     header {
         position: relative;
     }
@@ -260,7 +260,7 @@ form button[type="submit"]:hover {
     form select {
         max-width: 100%;
     }
-} */
+}
  
 
 .navbar-brand,
