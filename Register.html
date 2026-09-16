@@ -1,51 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Beranda</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SIMPUS-Mini | Register</title>
+
+    <!-- CSS milik kita sendiri -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- ===== Navbar ===== -->
     <header>
-        <h1>SIMPUS-Mini</h1>
-        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="buku/list.html">Daftar Buku</a></li>
-                <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                <li><a href="anggota/list.html">Daftar Anggota</a></li>
-            </ul>
-        </nav>
+      <h1>
+        <a href="index.html">SIMPUS-Mini</a>
+      </h1>
+
+      <!-- Tombol hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+
+      <!-- Menu -->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Beranda</a>
+          </li>
+
+          <li>
+            <a href="buku/list.html">Daftar Buku</a>
+          </li>
+
+          <li>
+            <a href="buku/tambah.html">Tambah Buku</a>
+          </li>
+
+          <li>
+            <a href="anggota/list.html">Daftar Anggota</a>
+          </li>
+
+          <li>
+            <a href="Register.html">Register</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
-            <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-        </section>
 
-        <section>
-            <h2>Ringkasan</h2>
-            <article>
-                <h3>Total Buku</h3>
-                <p>12</p>
-            </article>
-            <article>
-                <h3>Total Anggota</h3>
-                <p>8</p>
-            </article>
-            <article>
-                <h3>Sedang Dipinjam</h3>
-                <p>3</p>
-            </article>
-        </section>
+    <!-- ===== Halaman Register ===== -->
+    <main>
+
+      <section class="register-section">
+
+        <!-- Card Register -->
+        <div class="register-card">
+
+          <!-- Judul -->
+          <h2>Buat Akun</h2>
+
+          <p class="register-description">
+            Silakan isi data untuk membuat akun baru
+          </p>
+
+
+          <!-- Form Register -->
+          <form>
+
+            <!-- Nama Lengkap -->
+            <div class="form-group">
+              <label for="nama">
+                Nama Lengkap
+              </label>
+
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+            </div>
+
+
+            <!-- Username -->
+            <div class="form-group">
+              <label for="username">
+                Username
+              </label>
+
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Masukkan username"
+                required
+              />
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="contoh@email.com"
+                required
+              />
+            </div>
+
+
+            <!-- Password -->
+            <div class="form-group">
+              <label for="password">
+                Password
+              </label>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Masukkan password"
+                required
+              />
+            </div>
+
+
+            <!-- Konfirmasi Password -->
+            <div class="form-group">
+              <label for="password_confirmation">
+                Konfirmasi Password
+              </label>
+
+              <input
+                type="password"
+                id="password_confirmation"
+                name="password_confirmation"
+                placeholder="Masukkan kembali password"
+                required
+              />
+            </div>
+
+
+            <!-- Tombol Register -->
+            <button type="submit" class="register-button">
+              Daftar
+            </button>
+
+
+            <!-- Link Login -->
+            <p class="login-link">
+              Sudah punya akun?
+              <a href="Login.html">
+                Login di sini
+              </a>
+            </p>
+
+          </form>
+
+        </div>
+
+      </section>
+
     </main>
 
+
+    <!-- ===== Footer ===== -->
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 5</p>
+      <p>
+        &copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3 (CSS)
+      </p>
     </footer>
-    <script src="assets/js/app.js"></script>
-</body>
+
+  </body>
 </html>
