@@ -297,7 +297,7 @@ footer {
   display: inline-block;
 } */
 
-/* Gaya dasar yang disamakan dengan tombol Hapus */
+/* belum puas nanti di rombak lagi */
 .btn-edit, .btn-hapus {
     padding: 8px 16px;
     border-radius: 4px;
@@ -310,22 +310,20 @@ footer {
     box-sizing: border-box;
 }
 
-/* Warna spesifik untuk tombol Edit (Kuning) */
 .btn-edit {
-    background-color: #eab308; /* Warna kuning solid/amber */
-    color: #000000;            /* Teks hitam agar lebih mudah dibaca di latar kuning */
+    background-color: #eab308; /* Warna kuning solid */
+    color: #000000;            /* Teks hitam*/
 }
 
-/* Warna spesifik untuk tombol Hapus (Biru sesuai gambar) */
 .btn-hapus {
     background-color: #1e3a8a; /* Warna biru sesuai gambar Anda */
     color: #ffffff;            /* Teks putih */
 }
 
-/* Container Utama Pagination */
+/* Container Utama Limit */
 .pagination {
     display: flex;
-    justify-content: center; /* Membuat pagination berada di tengah halaman */
+    justify-content: center; /* Membuat Limit berada di tengah halaman */
     align-items: center;
     gap: 8px;               /* Memberikan jarak antar kotak angka */
     margin: 20px 0;
